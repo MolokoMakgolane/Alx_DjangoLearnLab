@@ -1,8 +1,9 @@
 from django.db import models
 
 # Create your models here.
-class Book(models.Model):
-    title = models.CharField(max_length=200)
+class Book:
+    class Book(models.Model):
+        title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
     published_date = models.DateField()
 
@@ -15,3 +16,5 @@ class Book(models.Model):
 
     def __str__(self):
         return f"id={self.id} title= {self.title} author= {self.author} published in the year {self.publication_year}"
+
+
