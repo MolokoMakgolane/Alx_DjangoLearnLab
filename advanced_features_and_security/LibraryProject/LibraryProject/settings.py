@@ -28,6 +28,41 @@ SECRET_KEY = 'django-insecure-rzqmb%n1%w!m*2gass+8liimwxc@%gp8=dfu(5y-p*nlshx6qs
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# Enable browser's XSS filter to help prevent cross-site script attacks
+SECURE_BROWSER_XSS_FILTER = True
+
+# prevent clickjacking
+X_FRAME_OPTIONS = 'DENY'
+
+# Prevent MIME type sniffing
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Ensure CSRF cookies are only sent over HTTPS
+CSRF_COOKIE_SECURE = True
+
+# Ensure session cookies are only sent over HTTPS to protect user sessions
+SESSION_COOKIE_SECURE = True
+
+# Redirect all HTTP requests to HTTPS to ensure secure connections
+SECURE_SSL_REDIRECT = True
+
+# Enable HTTP Strict Transport Security (HSTS) to enforce HTTPS for one year
+SECURE_HSTS_SECONDS = 31536000
+
+# Apply HSTS policy to all subdomains to ensure secure connections across the entire domain
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+
+# ensure Django recognizes HTTPS requests when behind a proxy
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+ALLOWED_HOSTS = []
+
+# Application definition
+
+# adding CSP to installed apps after using pip install django-csp
 
 
 # Application definition
