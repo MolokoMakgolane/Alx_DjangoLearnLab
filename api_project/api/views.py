@@ -8,6 +8,7 @@ from .models import Book
 
 # Create your views here.
 
+class viewsets.ModelViewSet
 
 class BookViewSet (generics.ListAPIView):
     """
