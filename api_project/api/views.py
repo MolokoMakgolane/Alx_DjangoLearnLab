@@ -9,7 +9,7 @@ from .models import Book
 # Create your views here.
 
 
-class viewsets.ModelViewSet(generics.ListAPIView):
+class BookViewSet (generics.ListAPIView):
     """
         Provides a read-only list of all books.
         * Only authenticated users are allowed to access this view or they will be allowed to READ it only.
