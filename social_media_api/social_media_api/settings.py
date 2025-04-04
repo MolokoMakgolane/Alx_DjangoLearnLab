@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest framework',
     'accounts',
     'posts',
+    'notifications',
 ]
 
 MIDDLEWARE = [
